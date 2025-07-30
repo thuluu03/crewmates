@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import { supabase } from "../client";
 import details from "../data/crewDescription";
 
@@ -49,6 +49,11 @@ const DetailedCrewmate = ({ id }) => {
         </div>
         <div className="description">
             {details.speed[crewmate?.speed]}
+        </div>
+        <div>
+            <Link to={"/edit/" + id}>
+                <div className="edit">edit</div>
+            </Link>
         </div>
         <button onClick={goBack}>Back</button>
       </div>

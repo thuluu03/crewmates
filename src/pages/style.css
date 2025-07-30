@@ -86,3 +86,17 @@ content p {
 .banner-img {
     width: 500px;
 }
+
+.edit {
+    border-style: solid;
+    border-width: 1px;
+    border-color: lightgray;
+    font-size: 20px;
+    font-weight: 500;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+.edit:hover {
+    color: aqua;
+}
