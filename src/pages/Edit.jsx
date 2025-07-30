@@ -52,11 +52,17 @@ const Edit = () => {
         navigate("/gallery")
     }
 
+    const goBack = () => {
+        navigate("/gallery")
+    }
+
     return (
         <div className="page-container">
             <Navbar></Navbar>
             <div className="content">
-                <div>
+                <button onClick={goBack}>Back</button>
+                <h1>Edit Crewmate</h1>
+                <div className='stats'>
                     <table>
                         <thead>
                             <tr>
@@ -74,8 +80,6 @@ const Edit = () => {
                         </tbody>
                     </table>
                 </div>
-
-                Edit Crewmate
                 <form onSubmit={handleSubmit}>
                     <label>
                         Name:
@@ -93,12 +97,12 @@ const Edit = () => {
                         <label><input type="radio" name="mate-color" value="green" onChange={(e) => handleInput("color", e.target.value)}></input>green</label>
                         <label><input type="radio" name="mate-color" value="mint" onChange={(e) => handleInput("color", e.target.value)}></input>mint</label>
                         <label><input type="radio" name="mate-color" value="purple" onChange={(e) => handleInput("color", e.target.value)}></input>purple</label>
-                        <label><input type="radio" name="mate-color" value="brown" onChange={(e) => handleInput("color", e.target.value)}></input>brown</label>
-                        <label><input type="radio" name="mate-color" value="gray" onChange={(e) => handleInput("color", e.target.value)}></input>gray</label>
+                        <label><input type="radio" name="mate-color" value="black" onChange={(e) => handleInput("color", e.target.value)}></input>black</label>
+                        <label><input type="radio" name="mate-color" value="white" onChange={(e) => handleInput("color", e.target.value)}></input>white</label>
                     </div>
                     <input type="submit"></input>
                 </form>
-                <button onClick={handleDelete}> Delete </button>
+                <button className='delete' onClick={handleDelete}> Delete </button>
             </div>
         </div>
     )

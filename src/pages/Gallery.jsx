@@ -26,16 +26,18 @@ const Gallery = () => {
 
     const Display = () => {
         return (
-            <div>
-                {crewmates.map((crewmate, index) => (
-                    <Crewmate
-                        key={index}
-                        id={crewmate.id}
-                        name={crewmate.name}
-                        color={crewmate.color}
-                        speed={crewmate.speed}
-                    />
-                ))}
+            <div className="gallery">
+                <div className="inner">
+                    {crewmates.map((crewmate, index) => (
+                        <Crewmate
+                            key={index}
+                            id={crewmate.id}
+                            name={crewmate.name}
+                            color={crewmate.color}
+                            speed={crewmate.speed}
+                        />
+                    ))}
+                </div>
             </div>
         )
     }
