@@ -27,7 +27,7 @@ The following **required** functionality is completed:
   - [x] **Each crewmate has a direct, unique URL link to an info page about them**
     - Clicking on a crewmate in the summary page navigates to a detail page for that crewmate
     - The detail page contains extra information about the crewmate not included in the summary page
-    - Users can navigate to to the edit form from the detail page
+    - Users can navigate to the edit form from the detail page
 
 The following **optional** features are implemented:
 
@@ -43,7 +43,9 @@ The following **optional** features are implemented:
 
 The following **additional** features are implemented:
 
-* [ ] List anything else that you added to improve the site's functionality!
+* [x] Add hover effects to make ui more intuitive
+    - changes color when hovering over navigation and change color when selected
+    - color changes when hovering over a crewmate to indicate selection
 
 ## Video Walkthrough
 
