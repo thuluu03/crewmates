@@ -12,6 +12,16 @@
 }
 
 .nav-link {
-    color: black;
+    color: white;
     font-size: 20px;
+    text-decoration: none;
+    border-radius: 8px;
+}
+
+.nav-link:hover {
+    box-shadow: inset 0px 0px 20px aqua;
+}
+
+.nav-link.active {
+    color: aqua;
 }

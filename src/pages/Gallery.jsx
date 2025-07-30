@@ -11,7 +11,7 @@ const Gallery = () => {
             const response = await supabase
                                 .from("Posts")
                                 .select("*");
-            setCrewmates(response.data)
+            setCrewmates(response.data.sort((a, b) => (a.created_at < b.created_at ? 1 : -1)))
         }
         fetchData()
     }, [])
@@ -27,8 +27,9 @@ const Gallery = () => {
     const Display = () => {
         return (
             <div>
-                {crewmates.map((crewmate) => (
+                {crewmates.map((crewmate, index) => (
                     <Crewmate
+                        key={index}
                         id={crewmate.id}
                         name={crewmate.name}
                         color={crewmate.color}
